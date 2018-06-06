@@ -14,6 +14,7 @@ public class Test {
 	//内部类测试Scanner
 	//Scanner类可以用来从键盘读取，可以输入任意字符，基本数据类型
 	public class ScannerTest{
+		int i=10;
 		public void test() {
 			Scanner sc=new Scanner(System.in);
 			String s=sc.nextLine();
@@ -32,6 +33,12 @@ public class Test {
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
+		}
+
+		class Test2{
+				int i=100;
+				System.out.println("内部类属性==="+this.i);
+				System.out.println("外部类属性===="+ScannerTest.this.i);
 		}
 	}
 	
